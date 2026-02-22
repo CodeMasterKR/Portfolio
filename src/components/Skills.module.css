@@ -203,3 +203,9 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 400px) {
+  .skillGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

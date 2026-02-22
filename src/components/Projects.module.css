@@ -367,6 +367,27 @@
   }
 }
 
+@media (max-width: 768px) {
+  /* Touch qurilmalarda hover ishlamasligi uchun har doim ko'rsatamiz */
+  .carouselBtn {
+    opacity: 1;
+  }
+
+  .carouselLinks {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .thumbLinks {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .thumbIcon {
+    transform: scale(0.85) translateY(-10px);
+  }
+}
+
 @media (max-width: 580px) {
   .section {
     padding: 4rem 1.5rem;
@@ -378,5 +399,14 @@
 
   .thumb {
     height: 150px;
+  }
+
+  .cardFooter {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .carousel {
+    height: 180px;
   }
 }
