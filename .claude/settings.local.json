@@ -8,7 +8,23 @@
       "Bash(git init:*)",
       "Bash(git remote add:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(python3:*)",
+      "Bash(node -e:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npx prisma db push:*)",
+      "Bash(npx ts-node:*)",
+      "Bash(ssh:*)",
+      "Bash(chmod:*)",
+      "Bash(git branch:*)",
+      "Bash(git rm:*)",
+      "Bash(git reset:*)",
+      "Bash(aws lightsail open-instance-public-ports:*)"
     ]
   }
 }

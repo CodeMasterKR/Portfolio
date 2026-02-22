@@ -27,39 +27,38 @@ export default function Contact() {
           <span className={styles.label}>// contact</span>
           <h2 className={styles.title}>Bog'lanish</h2>
           <p className={styles.subtitle}>
-            Yangi loyiha, hamkorlik yoki shunchaki salom — xabar yuboring!
+            Loyiha yoki hamkorlik bo'yicha murojaat qiling
           </p>
         </div>
 
         <div className={styles.layout}>
           <div className={styles.info}>
             <div className={styles.infoCard}>
-              <h3 className={styles.infoTitle}>Muloqot qilaylik</h3>
+              <h3 className={styles.infoTitle}>Kontakt</h3>
               <p className={styles.infoText}>
-                Hozirda yangi imkoniyatlarga ochiqman. Loyihangizda yordam kerakmi?
-                Yoki shunchaki tanishmoqchimisiz — xabar yuboring!
+                Hozirda yangi loyihalarga ochiqman. Quyidagi manzillar orqali bog'laning.
               </p>
 
               <div className={styles.contacts}>
-                <a href="mailto:email@example.com" className={styles.contactItem}>
+                <a href="mailto:ibrahimovkamronbek7@gmail.com" className={styles.contactItem}>
                   <div className={styles.contactIcon}><EmailIcon /></div>
                   <div>
                     <span className={styles.contactLabel}>Email</span>
-                    <span className={styles.contactValue}>email@example.com</span>
+                    <span className={styles.contactValue}>ibrahimovkamronbek7@gmail.com</span>
                   </div>
                 </a>
-                <a href="https://t.me/username" target="_blank" rel="noreferrer" className={styles.contactItem}>
+                <a href="https://t.me/Ibrohimov_kamron" target="_blank" rel="noreferrer" className={styles.contactItem}>
                   <div className={styles.contactIcon}><TelegramIcon /></div>
                   <div>
                     <span className={styles.contactLabel}>Telegram</span>
-                    <span className={styles.contactValue}>@username</span>
+                    <span className={styles.contactValue}>@Ibrohimov_kamron</span>
                   </div>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className={styles.contactItem}>
+                <a href="https://linkedin.com/in/ibrohimov-kamronbek" target="_blank" rel="noreferrer" className={styles.contactItem}>
                   <div className={styles.contactIcon}><LinkedInIcon /></div>
                   <div>
                     <span className={styles.contactLabel}>LinkedIn</span>
-                    <span className={styles.contactValue}>linkedin.com/in/username</span>
+                    <span className={styles.contactValue}>ibrohimov-kamronbek</span>
                   </div>
                 </a>
               </div>
