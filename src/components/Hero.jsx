@@ -39,9 +39,9 @@ export default function Hero() {
         </div>
 
         <p className={styles.desc}>
-          Men <strong>Node.js</strong> va <strong>React.js</strong> bilan zamonaviy,
-          tez va ishonchli veb-ilovalar yarataman. Backend dan Frontend gacha —
-          to'liq stack yechimlar.
+          <strong>Node.js</strong> va <strong>React.js</strong> — mening asosiy qurollarim.
+          Kichik loyihalardan tortib katta tizimlargacha qurib beraman.
+          Kod yozish uchun emas, muammoni hal qilish uchun dasturlashdaman.
         </p>
 
         <div className={styles.actions}>
@@ -54,13 +54,13 @@ export default function Hero() {
         </div>
 
         <div className={styles.socials}>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="GitHub">
+          <a href="https://github.com/CodeMasterKR" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="GitHub">
             <GitHubIcon />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+          <a href="https://linkedin.com/in/ibrohimov-kamronbek" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="LinkedIn">
             <LinkedInIcon />
           </a>
-          <a href="https://t.me/username" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="Telegram">
+          <a href="https://t.me/Ibrohimov_kamron" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="Telegram">
             <TelegramIcon />
           </a>
         </div>

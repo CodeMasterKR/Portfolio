@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className={styles.inner}>
         <a href="#hero" className={styles.logo}>
           <span className={styles.logoSymbol}>&lt;</span>
-          dev
+          Ibrohimov
           <span className={styles.logoSymbol}>/&gt;</span>
         </a>
 
