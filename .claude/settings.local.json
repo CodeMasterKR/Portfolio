@@ -24,7 +24,9 @@
       "Bash(git branch:*)",
       "Bash(git rm:*)",
       "Bash(git reset:*)",
-      "Bash(aws lightsail open-instance-public-ports:*)"
+      "Bash(aws lightsail open-instance-public-ports:*)",
+      "WebFetch(domain:codemasterkr.github.io)",
+      "WebFetch(domain:me.edunex.uz)"
     ]
   }
 }

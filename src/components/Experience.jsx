@@ -3,12 +3,12 @@ import styles from './Experience.module.css'
 const education = [
   {
     institution: 'Toshkent Davlat Pedagogika Universiteti',
-    degree: 'Matematika va Informatika o\'qituvchisi',
+    degree: 'Math and Computer science',
     period: '2021 — 2025',
     type: 'Bakalavr',
   },
   {
-    institution: 'Najot Ta\'lim',
+    institution: "Najot Ta'lim",
     degree: 'Fullstack Development Bootcamp',
     period: '2024',
     type: 'Bootcamp',
@@ -17,16 +17,16 @@ const education = [
 
 const work = [
   {
-    company: 'London Education o\'quv markazi',
-    role: 'Main Fullstack Mentor',
-    period: 'Mart 2025 — hozir',
+    company: 'Tenzor SOFT',
+    role: 'Fullstack Dasturchi',
+    period: 'Yanvar 2025 — Hozir',
     current: true,
   },
   {
-    company: 'Yakkasaroy 172-maktab',
-    role: 'Informatika o\'qituvchisi',
-    period: '2023',
-    current: false,
+    company: 'EduNex Startup',
+    role: 'Fullstack Dasturchi va Mentor',
+    period: '2025 — yil to\'liq',
+    current: true,
   },
 ]
 

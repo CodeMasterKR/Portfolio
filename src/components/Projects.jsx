@@ -7,7 +7,7 @@ const projects = [
     desc: 'O\'quv markazini to\'liq tizimlashtirish uchun platforma. Director, Manager, Admin, Teacher va Studentlar uchun alohida Telegram bot va web panel. Har bir rol o\'z imkoniyatlariga ega.',
     tags: ['NestJS', 'Prisma', 'PostgreSQL', 'React.js', 'Tailwind CSS', 'AWS'],
     github: null,
-    live: 'https://edunex.uz',
+    live: 'https://crm.edunex.uz',
     images: [
       `${import.meta.env.BASE_URL}screenshots/project1/img1.png`,
       `${import.meta.env.BASE_URL}screenshots/project1/img2.png`,
@@ -62,13 +62,17 @@ const projects = [
     ],
   },
   {
-    title: 'Real-Time Chat App',
-    desc: 'Socket.io asosida qurilgan real vaqtli chat ilovasi. Guruhli xonalar, xususiy xabarlar, emoji va jonli onlayn holat ko\'rsatkichi. JWT autentifikatsiya bilan.',
-    tags: ['Node.js', 'Socket.io', 'React', 'TypeScript', 'MongoDB'],
+    title: 'Luvi Uz',
+    desc: 'Websocket qismi Stomp orqali qilingan. Video va Auido call qismida esa Jitsi kutubxonasi o\'zimizni serverga qo\'yilgan va keyin mos interface berilgan.',
+    tags: ['Next.js', 'Stompjs', 'React', 'TypeScript', 'Tailwindcss'],
     github: null,
-    live: 'https://chat.edunex.uz',
+    live: 'https://luvi.uz',
     gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-    icon: '💬',
+    images: [
+      `${import.meta.env.BASE_URL}screenshots/project6/img1.png`,
+      `${import.meta.env.BASE_URL}screenshots/project6/img2.png`,
+      `${import.meta.env.BASE_URL}screenshots/project6/img3.png`,
+    ],
   },
 ]
 
