@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
 
         <p className={styles.desc}>
-          <strong>Node.js</strong> va <strong>React.js</strong> — mening asosiy qurollarim.
+          <strong>Nest.js</strong> va <strong>Next.js</strong> — mening asosiy qurollarim.
           Kichik loyihalardan tortib katta tizimlargacha qurib beraman.
           Kod yozish uchun emas, muammoni hal qilish uchun dasturlashdaman.
         </p>
