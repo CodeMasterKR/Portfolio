@@ -7,7 +7,7 @@ const projects = [
     desc: 'O\'quv markazini to\'liq tizimlashtirish uchun platforma. Director, Manager, Admin, Teacher va Studentlar uchun alohida Telegram bot va web panel. Har bir rol o\'z imkoniyatlariga ega.',
     tags: ['NestJS', 'Prisma', 'PostgreSQL', 'React.js', 'Tailwind CSS', 'AWS'],
     github: null,
-    live: 'https://crm.edunex.uz',
+    live: 'https://edunex.uz',
     images: [
       `${import.meta.env.BASE_URL}screenshots/project1/img1.png`,
       `${import.meta.env.BASE_URL}screenshots/project1/img2.png`,
