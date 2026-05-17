@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
 
         <div className={styles.socials}>
-          <a href="https://github.com/CodeMasterKR" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="GitHub">
+          <a href="https://github.com/kamron-ibrohimov" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="GitHub">
             <GitHubIcon />
           </a>
           <a href="https://linkedin.com/in/ibrohimov-kamronbek" target="_blank" rel="noreferrer" className={styles.socialLink} aria-label="LinkedIn">

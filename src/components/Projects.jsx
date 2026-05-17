@@ -95,7 +95,7 @@ export default function Projects() {
         </div>
 
         <div className={styles.more}>
-          <a href="https://github.com/CodeMasterKR" target="_blank" rel="noreferrer" className={styles.moreBtn}>
+          <a href="https://github.com/kamron-ibrohimov" target="_blank" rel="noreferrer" className={styles.moreBtn}>
             GitHub'da ko'proq
             <ArrowIcon />
           </a>

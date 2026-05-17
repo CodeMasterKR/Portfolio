@@ -13,7 +13,7 @@ export default function Footer() {
           © {year} Ibrohimov Kamronbek. Fullstack Developer.
         </p>
         <div className={styles.links}>
-          <a href="https://github.com/CodeMasterKR" target="_blank" rel="noreferrer" className={styles.link}>GitHub</a>
+          <a href="https://github.com/kamron-ibrohimov" target="_blank" rel="noreferrer" className={styles.link}>GitHub</a>
           <span className={styles.dot}>·</span>
           <a href="https://linkedin.com/in/ibrohimov-kamronbek" target="_blank" rel="noreferrer" className={styles.link}>LinkedIn</a>
           <span className={styles.dot}>·</span>
