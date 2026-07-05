@@ -72,6 +72,38 @@
   background: var(--accent-glow);
 }
 
+/* Til almashtirgich */
+.langSwitch {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--accent-glow);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.langBtn {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.langBtn:hover { color: var(--text-primary); }
+
+.langActive {
+  background: var(--accent);
+  color: #fff;
+}
+.langActive:hover { color: #fff; }
+
 /* Burger */
 .burger {
   display: none;

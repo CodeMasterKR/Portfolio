@@ -1,6 +1,8 @@
 import styles from './Footer.module.css'
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLang()
   const year = new Date().getFullYear()
 
   return (
@@ -10,7 +12,7 @@ export default function Footer() {
           <span className={styles.sym}>&lt;</span>Ibrohimov<span className={styles.sym}>/&gt;</span>
         </a>
         <p className={styles.copy}>
-          © {year} Ibrohimov Kamronbek. Fullstack Developer.
+          © {year} Ibrohimov Kamronbek. {t.footer.role}
         </p>
         <div className={styles.links}>
           <a href="https://github.com/kamron-ibrohimov" target="_blank" rel="noreferrer" className={styles.link}>GitHub</a>

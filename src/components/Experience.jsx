@@ -1,49 +1,29 @@
 import styles from './Experience.module.css'
-
-const education = [
-  {
-    institution: 'Toshkent Davlat Pedagogika Universiteti',
-    degree: 'Math and Computer science',
-    period: '2021 — 2025',
-    type: 'Bakalavr',
-  },
-  {
-    institution: "Najot Ta'lim",
-    degree: 'Fullstack Development Bootcamp',
-    period: '2024',
-    type: 'Bootcamp',
-  },
-]
-
-const work = [
-  {
-    company: 'Tenzor SOFT',
-    role: 'Fullstack Dasturchi',
-    period: 'Yanvar 2025 — Hozir',
-    current: true,
-  },
-  {
-    company: 'EduNex Startup',
-    role: 'Fullstack Dasturchi va Mentor',
-    period: '2025 — yil to\'liq',
-    current: true,
-  },
-]
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Experience() {
+  const { t } = useLang()
+  const { work, education, languages } = t.experience
+
   return (
     <section id="experience" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <span className={styles.label}>// experience</span>
-          <h2 className={styles.title}>Ta'lim & Ish tajriba</h2>
+          <span className={styles.label}>{t.experience.label}</span>
+          <h2 className={styles.title}>{t.experience.title}</h2>
         </div>
 
-        <div className={styles.grid}>
+        <div className={styles.timeline}>
+          {work.map((job, i) => (
+            <WorkCard key={i} {...job} />
+          ))}
+        </div>
+
+        <div className={styles.bottom}>
           <div className={styles.column}>
             <div className={styles.colHeader}>
               <GradIcon />
-              <span>Ta'lim</span>
+              <span>{t.experience.educationTitle}</span>
             </div>
             <div className={styles.cards}>
               {education.map((item, i) => (
@@ -54,18 +34,61 @@ export default function Experience() {
 
           <div className={styles.column}>
             <div className={styles.colHeader}>
-              <BriefIcon />
-              <span>Ish tajriba</span>
+              <GlobeIcon />
+              <span>{t.experience.languagesTitle}</span>
             </div>
-            <div className={styles.cards}>
-              {work.map((item, i) => (
-                <WorkCard key={i} {...item} />
+            <div className={styles.langCard}>
+              {languages.map((lang, i) => (
+                <LangBar key={i} {...lang} />
               ))}
             </div>
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function WorkCard({ company, role, period, current, projects }) {
+  return (
+    <div className={styles.workCard}>
+      <div className={styles.workMarker}>
+        <span className={styles.markerDot} />
+      </div>
+      <div className={styles.workBody}>
+        <div className={styles.workTop}>
+          <div>
+            <h3 className={styles.workRole}>{role}</h3>
+            <span className={styles.workCompany}>{company}</span>
+          </div>
+          {current
+            ? <span className={styles.currentBadge}><span className={styles.liveDot} />{period}</span>
+            : <span className={styles.period}>{period}</span>
+          }
+        </div>
+
+        <div className={styles.projects}>
+          {projects.map((p, i) => (
+            <div key={i} className={styles.project}>
+              <div className={styles.projectHead}>
+                <h4 className={styles.projectName}>{p.name}</h4>
+                <span className={styles.projectSummary}>{p.summary}</span>
+              </div>
+              <div className={styles.projectStack}>
+                {p.stack.map(s => (
+                  <span key={s} className={styles.stackTag}>{s}</span>
+                ))}
+              </div>
+              <ul className={styles.points}>
+                {p.points.map((pt, j) => (
+                  <li key={j}>{pt}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -82,18 +105,16 @@ function EduCard({ institution, degree, period, type }) {
   )
 }
 
-function WorkCard({ company, role, period, current }) {
+function LangBar({ name, level, value }) {
   return (
-    <div className={`${styles.card} ${current ? styles.cardActive : ''}`}>
-      <div className={styles.cardTop}>
-        {current
-          ? <span className={styles.currentBadge}><span className={styles.liveDot} />Hozir</span>
-          : <span className={styles.typeBadge}>Sobiq</span>
-        }
-        <span className={styles.period}>{period}</span>
+    <div className={styles.lang}>
+      <div className={styles.langTop}>
+        <span className={styles.langName}>{name}</span>
+        <span className={styles.langLevel}>{level}</span>
       </div>
-      <h4 className={styles.cardTitle}>{company}</h4>
-      <p className={styles.cardSub}>{role}</p>
+      <div className={styles.langTrack}>
+        <span className={styles.langFill} style={{ width: `${value}%` }} />
+      </div>
     </div>
   )
 }
@@ -106,10 +127,10 @@ function GradIcon() {
   )
 }
 
-function BriefIcon() {
+function GlobeIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+      <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
     </svg>
   )
 }

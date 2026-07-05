@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import styles from './Projects.module.css'
+import { useLang } from '../i18n/LanguageContext'
 
-const projects = [
+// Neytral (tilga bog'liq bo'lmagan) ma'lumot — sarlavha/tavsif tarjimadan keladi.
+const projectsBase = [
   {
-    title: 'EduNex — O\'quv Markaz Tizimi',
-    desc: 'O\'quv markazini to\'liq tizimlashtirish uchun platforma. Director, Manager, Admin, Teacher va Studentlar uchun alohida Telegram bot va web panel. Har bir rol o\'z imkoniyatlariga ega.',
     tags: ['NestJS', 'Prisma', 'PostgreSQL', 'React.js', 'Tailwind CSS', 'AWS'],
     github: null,
     live: 'https://edunex.uz',
@@ -15,8 +15,6 @@ const projects = [
     ],
   },
   {
-    title: 'Intizom — Productivity App',
-    desc: 'Odatlar, vazifalar, maqsadlar va moliyani kuzatuvchi to\'liq platforma. Obuna tizimi, admin panel va analytics bilan. O\'zini rivojlantirmoqchi bo\'lgan foydalanuvchilar uchun yaratilgan.',
     tags: ['NestJS', 'Prisma', 'PostgreSQL', 'React', 'TypeScript', 'Tailwind CSS'],
     github: null,
     live: 'https://intizom.uz',
@@ -27,8 +25,6 @@ const projects = [
     ],
   },
   {
-    title: 'Ustoz Support — AI Yordamchi',
-    desc: 'O\'qituvchilar uchun AI asosida taqdimot, test, o\'yin va amaliyotlar yaratuvchi zamonaviy platforma. Google autentifikatsiya va obuna tizimi bilan.',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Google OAuth'],
     github: null,
     live: 'https://support-teacher.edunex.uz',
@@ -39,19 +35,16 @@ const projects = [
     ],
   },
   {
-    title: 'Prezentor — AI Taqdimot Bot',
-    desc: 'Telegram bot orqali Google Gemini AI yordamida taqdimot, referat va mustaqil ishlar yaratuvchi xizmat. 1000+ dan ortiq faol foydalanuvchi bilan ishlamoqda.',
-    tags: ['Node.js', 'Telegraf', 'MongoDB', 'Google Gemini AI'],
+    tags: ['NestJS', 'Prisma', 'PostgreSQL', 'React', 'TypeScript', 'WebSocket'],
     github: null,
-    live: 'https://t.me/prezentor_bot',
+    live: 'https://vizitka.edunex.uz',
     images: [
-      `${import.meta.env.BASE_URL}screenshots/project4/img1.png`,
-      `${import.meta.env.BASE_URL}screenshots/project4/img2.png`,
+      `${import.meta.env.BASE_URL}screenshots/mstore/img1.png`,
+      `${import.meta.env.BASE_URL}screenshots/mstore/img2.png`,
+      `${import.meta.env.BASE_URL}screenshots/mstore/img3.png`,
     ],
   },
   {
-    title: 'ShopUz — E-Commerce Platforma',
-    desc: 'To\'liq funksional onlayn do\'kon. Mahsulot katalogi, savat, buyurtmalar va admin panel. JWT autentifikatsiya, qidiruv va kategoriya filtri bilan.',
     tags: ['NestJS', 'Prisma', 'PostgreSQL', 'React', 'TypeScript', 'Tailwind CSS'],
     github: null,
     live: 'https://shop.edunex.uz',
@@ -62,8 +55,6 @@ const projects = [
     ],
   },
   {
-    title: 'Luvi Uz',
-    desc: 'Websocket qismi Stomp orqali qilingan. Video va Auido call qismida esa Jitsi kutubxonasi o\'zimizni serverga qo\'yilgan va keyin mos interface berilgan.',
     tags: ['Next.js', 'Stompjs', 'React', 'TypeScript', 'Tailwindcss'],
     github: null,
     live: 'https://luvi.uz',
@@ -77,13 +68,16 @@ const projects = [
 ]
 
 export default function Projects() {
+  const { t } = useLang()
+  const projects = projectsBase.map((p, i) => ({ ...p, ...t.projects.items[i] }))
+
   return (
     <section id="projects" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <span className={styles.label}>// projects</span>
-          <h2 className={styles.title}>Loyihalar</h2>
-          <p className={styles.subtitle}>Qurgan eng yaxshi ishlarimdan ba'zilari</p>
+          <span className={styles.label}>{t.projects.label}</span>
+          <h2 className={styles.title}>{t.projects.title}</h2>
+          <p className={styles.subtitle}>{t.projects.subtitle}</p>
         </div>
 
         <div className={styles.grid}>
@@ -96,7 +90,7 @@ export default function Projects() {
 
         <div className={styles.more}>
           <a href="https://github.com/kamron-ibrohimov" target="_blank" rel="noreferrer" className={styles.moreBtn}>
-            GitHub'da ko'proq
+            {t.projects.more}
             <ArrowIcon />
           </a>
         </div>

@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
 import styles from './Hero.module.css'
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLang()
   const cursorRef = useRef(null)
 
   useEffect(() => {
@@ -24,32 +26,28 @@ export default function Hero() {
       <div className={styles.inner}>
         <div className={styles.badge}>
           <span className={styles.dot} />
-          Available for work
+          {t.hero.badge}
         </div>
 
         <h1 className={styles.title}>
-          Hi, I'm{' '}
-          <span className={styles.accent}>Kamronbek</span>
+          {t.hero.greet}{' '}
+          <span className={styles.accent}>{t.hero.name}</span>
         </h1>
 
         <div className={styles.subtitle}>
           <span className={styles.mono}>&gt;</span>{' '}
-          <span>Fullstack Developer</span>
+          <span>{t.hero.role}</span>
           <span ref={cursorRef} className={styles.cursor}>_</span>
         </div>
 
-        <p className={styles.desc}>
-          <strong>Nest.js</strong> va <strong>Next.js</strong> — mening asosiy qurollarim.
-          Kichik loyihalardan tortib katta tizimlargacha qurib beraman.
-          Kod yozish uchun emas, muammoni hal qilish uchun dasturlashdaman.
-        </p>
+        <p className={styles.desc} dangerouslySetInnerHTML={{ __html: t.hero.desc }} />
 
         <div className={styles.actions}>
           <a href="#projects" className={styles.btnPrimary}>
-            View Projects
+            {t.hero.viewProjects}
           </a>
           <a href="#contact" className={styles.btnSecondary}>
-            Contact Me
+            {t.hero.contactMe}
           </a>
         </div>
 
@@ -64,11 +62,6 @@ export default function Hero() {
             <TelegramIcon />
           </a>
         </div>
-      </div>
-
-      <div className={styles.scroll}>
-        <div className={styles.scrollLine} />
-        <span>scroll</span>
       </div>
     </section>
   )

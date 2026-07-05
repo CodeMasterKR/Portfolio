@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
-
-const links = [
-  { href: '#hero', label: 'Home' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
-]
+import { useLang } from '../i18n/LanguageContext'
+import { SUPPORTED, LANG_LABELS } from '../i18n/translations'
 
 export default function Navbar() {
+  const { lang, setLang, t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -19,6 +15,13 @@ export default function Navbar() {
   }, [])
 
   const closeMenu = () => setMenuOpen(false)
+
+  const links = [
+    { href: '#hero', label: t.nav.home },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#projects', label: t.nav.projects },
+    { href: '#contact', label: t.nav.contact },
+  ]
 
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
@@ -35,12 +38,26 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
+          <div className={styles.langSwitch} role="group" aria-label="Language">
+            {SUPPORTED.map(code => (
+              <button
+                key={code}
+                type="button"
+                className={`${styles.langBtn} ${lang === code ? styles.langActive : ''}`}
+                onClick={() => setLang(code)}
+              >
+                {LANG_LABELS[code]}
+              </button>
+            ))}
+          </div>
+
           <a
             href="#contact"
             className={styles.cta}
             onClick={closeMenu}
           >
-            Hire Me
+            {t.nav.hire}
           </a>
         </nav>
 

@@ -35,12 +35,11 @@
   font-size: 0.95rem;
 }
 
-/* Cards grid */
+/* Cards grid — laptopda 4 kategoriya bitta qatorda */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
-  margin-bottom: 1.5rem;
 }
 
 .card {
@@ -78,19 +77,20 @@
   font-weight: 600;
 }
 
-/* Skill items */
+/* Skill items — kvadrat plitkalar (ikon tepada, nom pastda), 2 ustun */
 .skillGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
 }
 
 .skillItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 0.5rem;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0.4rem;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--bg-secondary);
@@ -109,10 +109,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 1.45rem;
   transition: transform 0.2s;
 }
 
@@ -121,10 +122,10 @@
 }
 
 .skillName {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.25;
   transition: color 0.2s;
 }
 
@@ -183,9 +184,10 @@
   flex-shrink: 0;
 }
 
+/* Planshet — 4 karta 2 qatorga bo'linadi */
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -196,16 +198,5 @@
 
   .grid {
     grid-template-columns: 1fr;
-  }
-
-  .extras {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 400px) {
-  .skillGrid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
